@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Image Upload</title>
+</head>
+<body>
+
+<div class="container">
+  <label for="imageInput" class="upload-btn">
+    Загрузить изображение
+  </label>
+  <input type="file" id="imageInput" accept="image/*" onchange="previewImage(event)">
+  <div id="previewContainer" class="hidden">
+    <img id="previewImage" alt="Preview">
+  </div>
+</div>
+
+<button id="circleButton" class="hidden" onclick="drawCircle()">Кружок</button>
+
+<div id="popup" class="hidden">
+  <button id="editButton" onclick="toggleEditMode()">Редактировать</button>
+  <p id="editableText" contenteditable="false">Редактируйте этот текст.</p>
+  <span id="closePopup" onclick="closePopup()">Закрыть</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
